@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!--This specifies the character encoding used in the document, which is important for ensuring that special characters and symbols are displayed correctly.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--This is a tag that's specific to Internet Explorer (IE) and tells the browser to use the latest version of the rendering engine available.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--This sets the viewport size for the page, which is important for ensuring that the page displays properly on different devices and screen sizes-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"><!--This links to an external CSS stylesheet hosted on the Cloudflare content delivery network, which provides access to the Font Awesome icon library.-->
+    <link rel="stylesheet" href="style.css"><!--This links to another external CSS stylesheet called "style.css" that's located in the same directory as the HTML file.-->
+    <title>#2 - Online Text Editor | AsmrProg</title><!--This sets the title of the page, which is displayed in the browser's title bar and is important for search engine optimization (SEO) purposes.-->
+</head>
+
+<body>
+
+    <div class="container"><!--This is a <div> element with a class attribute set to "container". The class attribute is used to apply CSS styles to the element, and "container" is a common class name used to define a container for other elements. -->
+        <div class="options"><!--This is another <div> element with a class attribute set to "options". This element is nested inside the "container" element, and it likely contains a set of buttons or other options for the user to interact with.-->
+            <button id="bold" class="option-button format"><!--This is a <button> element with an id attribute set to "bold" and two class attributes set to "option-button" and "format". The id attribute is used to identify the button in JavaScript, and the class attributes are used to apply CSS styles to the button.-->
+                <i class="fa-solid fa-bold"></i><!--This is an <i> element with a class attribute set to "fa-solid fa-bold". The <i> element is used to represent an icon, and the class attribute is used to specify which icon to display. In this case, the icon is likely a bold text icon from the Font Awesome icon library.-->
+            </button>
+            <button id="superscript" class="option-button script">
+                <i class="fa-solid fa-superscript"></i>
+            </button>
+            <button id="subscript" class="option-button script">
+                <i class="fa-solid fa-subscript"></i>
+            </button>
+
+            <button id="insertOrderedList" class="option-button">
+                <div class="fa-solid fa-list-ol"></div>
+            </button>
+            <button id="insertUnorderedList" class="option-button">
+                <i class="fa-solid fa-list"></i>
+            </button>
+
+            <button id="undo" class="option-button">
+                <i class="fa-solid fa-rotate-left"></i>
+            </button>
+            <button id="redo" class="option-button">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+
+            <button id="createLink" class="adv-option-button">
+                <i class="fa fa-link"></i>
+            </button>
+            <button id="unlink" class="option-button">
+                <i class="fa fa-unlink"></i>
+            </button>
+
+            <button id="justifyLeft" class="option-button align">
+                <i class="fa-solid fa-align-left"></i>
+            </button>
+            <button id="justifyCenter" class="option-button align">
+                <i class="fa-solid fa-align-center"></i>
+            </button>
+            <button id="justifyRight" class="option-button align">
+                <i class="fa-solid fa-align-right"></i>
+            </button>
+            <button id="justifyFull" class="option-button align">
+                <i class="fa-solid fa-align-justify"></i>
+            </button>
+            <button id="indent" class="option-button spacing">
+                <i class="fa-solid fa-indent"></i>
+            </button>
+            <button id="outdent" class="option-button spacing">
+                <i class="fa-solid fa-outdent"></i>
+            </button>
+            <select id="formatBlock" class="adv-option-button">
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="H4">H4</option>
+                <option value="H5">H5</option>
+                <option value="H6">H6</option>
+            </select>
+            <select id="fontName" class="adv-option-button"></select>
+            <select id="fontSize" class="adv-option-button"></select>
+
+            <div class="input-wrapper">
+                <input type="color" id="foreColor" class="adv-option-button">
+                <label for="foreColor">Font Color</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="color" id="backColor" class="adv-option-button">
+                <label for="backColor">Highlight Color</label>
+            </div>
+
+        </div>
+        <div id="text-input" contenteditable="true"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
